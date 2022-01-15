@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        Section 4
     </div>
 </template>
 
