@@ -1,20 +1,22 @@
 <template>
-    <div class="container">
+    <div :style="sectionBackgroundImage" class="container">
         <app-navigation></app-navigation>
         <div class="row">
-            <div class="col-6 left-image-section">
-                <img src="playForPurpose.png"> 
-            </div>
-            <div class="col-6 right-image-section">
-                <img src="365Screen11.png"> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 icons-section">
-                <img src="pngkitFortnitePngLogo4308881.png"> 
-                <img src="warzoneLogoWhiteTmAtvi2.png"> 
-                <img src="apexWhite2.png"> 
-                <img src="pngItem11648122.png"> 
+            <div class="col-12 section-one-col">
+                <div class="play-for-purpose-section">
+                    <img src="Play4PURPOSE.png" class="play-for-purpose-image">
+                    <div class="join-now-btn-border-wrap">
+                        <a class="join-now-btn">JOIN NOW <span class="join-now-right-arrows">>></span></a>
+                    </div>
+                    <div class="games-images-section">
+                        <img src="Warzone.png">
+                        <img src="apexWhite.png">
+                        <img src="PUBG.png">
+                    </div>
+                </div>
+                <div class="soldier-section">
+                    <img src="maskGroup.png">
+                </div>
             </div>
         </div>
     </div>
@@ -24,6 +26,11 @@
 import AppNavigation from '@/components/AppNavigation';
 export default {
     name: 'SectionOne',
+    data() {
+        return {
+            sectionBackgroundImage: {backgroundImage: "url(headerBg.png)"}
+        };
+    },
     components: {
         AppNavigation
     }
@@ -32,42 +39,76 @@ export default {
 
 <style scoped>
 .container {
-    height: 115vh;
-    max-width: 100vw;
-    min-width: 100vw;
+    height: 1445px;
+    width: 1672px;
     background-color: black;
+    background-repeat: no-repeat;
     color: #ffffff;
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
 }
 
-.left-image-section {
-    padding-top: 145px;
-}
-
-.left-image-section img {
-    width: 62%;
-    margin-left: 16%;
-}
-
-.right-image-section {
+.section-one-col {
     position: relative;
 }
 
-.right-image-section img {
+.play-for-purpose-section {
     position: absolute;
-    top: -49%;
-    right: -4%;
-    width: 130%;
+    top: 2px;
+    left: 79px;
+    z-index: 3;
 }
 
-.icons-section {
-    text-align: center;
-    margin-top: 13%;
+.play-for-purpose-section .play-for-purpose-image {
+    width: 100%;
 }
 
-.icons-section img {
-    margin-right: 12%;
+.soldier-section {
+    position: absolute;
+    top: -20px;
+    left: 600px;
+    z-index: 2;
+}
+
+.soldier-section img {
+    width: 100%;
+}
+
+.join-now-btn-border-wrap {
+    max-width: 231px;
+    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+    padding: 1px !important;
+    color: #ffffff !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+    margin-top: 80px;
+}
+
+.join-now-btn {
+    cursor: pointer;
+    background: #000000;
+    color: white;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    text-decoration: none !important;
+}
+
+.join-now-right-arrows {
+    padding-left: 30px;
+    letter-spacing: -4px;
+}
+
+.join-now-btn:hover {
+    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+}
+
+.games-images-section {
+    margin-top: 80px;
+}
+
+.games-images-section img {
+    margin-right: 80px;
 }
 </style>

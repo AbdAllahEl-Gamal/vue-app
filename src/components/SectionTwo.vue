@@ -1,24 +1,26 @@
 <template>
-    <div class="container">
-        Section 2
+    <div :style="sectionBackgroundImage" class="container">
+        
     </div>
 </template>
 
 <script>
 export default {
-    name: 'SectionTwo'
+    name: 'SectionTwo',
+    data() {
+        return {
+            sectionBackgroundImage: {backgroundImage: "url(3easystepsbg.png)"}
+        };
+    },
 };
 </script>
 
 <style scoped>
 .container {
-    height: 100vh;
-    max-width: 100vw;
-    min-width: 100vw;
+    height: 950px;
+    width: 1672px;
     background-color: black;
+    background-repeat: no-repeat;
     color: #ffffff;
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
 }
 </style>

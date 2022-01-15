@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="row nav-section">
-            <div class="nav-left-icon col-6">
+            <div class="nav-left-icon col-5">
                 <img src="365LogoFinalWhite1.png">                
             </div>
-            <div class="nav-right col-6">
+            <div class="nav-right col-7">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -22,8 +22,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
-                        <li class="nav-item login-btn">
-                            <a class="nav-link" href="#">Login</a>
+                        <li class="nav-item login-btn-border-wrap">
+                            <a class="nav-link login-btn" href="#">Login</a>
                         </li>
                     </ul>
                 </nav>
@@ -57,15 +57,19 @@ export default {
 <style scoped>
 .nav-section {
     padding-top: 45px;
+    padding-bottom: 65px;
 }
 
 .nav-left-icon {
-    padding-left: 133px;
+    padding-left: 63px;
+}
+
+.navbar-light .navbar-nav .nav-item a {
+    cursor: pointer;
 }
 
 .navbar-light .navbar-nav .nav-item {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -74,10 +78,25 @@ export default {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    color: #FFFFFF;
+}
+
+.login-btn-border-wrap {
+    max-width: 250px;
+    position: relative;
+    background: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%);
+    padding: 1px !important;
 }
 
 .login-btn {
-    border: 2px solid;
+    background: #000000;
+    color: white;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
 }
 </style>

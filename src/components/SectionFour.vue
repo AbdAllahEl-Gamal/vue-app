@@ -13,12 +13,9 @@ export default {
 <style scoped>
 .container {
     height: 100vh;
-    max-width: 100vw;
-    min-width: 100vw;
-    background: black;
+    width: 1672px;
+    background-color: black;
+    background-repeat: no-repeat;
     color: #ffffff;
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
 }
 </style>
