@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid">
     </div>
 </template>
 
@@ -10,9 +10,8 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container-fluid {
     height: 100vh;
-    width: 1672px;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;

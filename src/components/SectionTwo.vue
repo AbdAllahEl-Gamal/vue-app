@@ -1,5 +1,5 @@
 <template>
-    <div :style="sectionBackgroundImage" class="container">
+    <div :style="sectionBackgroundImage" class="container-fluid">
         <div class="row">
             <div class="col-12 steps-title-section">
                 <img src="section3StepsTitle.png">
@@ -28,9 +28,8 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container-fluid {
     height: 950px;
-    width: 1672px;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;

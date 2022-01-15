@@ -1,5 +1,5 @@
 <template>
-    <div :style="sectionBackgroundImage" class="container">
+    <div :style="sectionBackgroundImage" class="container-fluid">
         <app-navigation></app-navigation>
         <div class="row">
             <div class="col-12 section-one-col">
@@ -38,9 +38,8 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container-fluid {
     height: 1445px;
-    width: 1672px;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
