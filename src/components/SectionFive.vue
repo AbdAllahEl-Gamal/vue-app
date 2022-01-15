@@ -26,6 +26,7 @@ export default {
 
 <style scoped>
 .container-fluid {
+    min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;

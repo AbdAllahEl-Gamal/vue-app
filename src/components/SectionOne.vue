@@ -40,6 +40,7 @@ export default {
 <style scoped>
 .container-fluid {
     height: 1445px;
+    min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
