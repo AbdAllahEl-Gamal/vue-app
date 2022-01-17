@@ -58,7 +58,7 @@ export default {
 
 .newspaper-soldier-section img {
     width: 100%;
-    margin-left: 17px;
+    margin-top: 7%;
 }
 
 .newspaper-soldier-form-section {
@@ -70,10 +70,11 @@ export default {
 }
 
 .newspaper-soldier-form-section p {
+    max-width: 100%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 50px;
     letter-spacing: -0.5px;
     opacity: 0.6;
@@ -110,8 +111,10 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 0.6em;
     color: #FFFFFF;
+    margin-bottom: 0px;
+    margin-top: 0.8em;
 }
 
 .purple-color {
@@ -123,7 +126,7 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 0.6em;
     text-decoration: none !important;
     color: #FFFFFF;
     margin-right: 30px;

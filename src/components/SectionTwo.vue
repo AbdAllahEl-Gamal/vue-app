@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 .container-fluid {
-    height: 130vh;
+    height: 180vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
@@ -98,15 +98,15 @@ export default {
 }
 
 .left-section-comment-cont {
-    width: 416px;
-    height: 436px;
+    max-width: 416px;
+    min-height: 436px;
     background: #FFFFFF;
     border-radius: 15px;
     padding: 40px;
 }
 
 .left-section-comment-par {
-    width: 304px;
+    max-width: 304px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
@@ -155,8 +155,8 @@ export default {
 }
 
 .right-section-comment1-cont {
-    width: 509px;
-    height: 360px;
+    max-width: 509px;
+    min-height: 360px;
     background: #FFFFFF;
     border-radius: 15px;
     padding: 40px;
@@ -178,7 +178,7 @@ export default {
 }
 
 .right-section-comment1-par {
-    width: 445px;
+    max-width: 445px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
@@ -213,8 +213,8 @@ export default {
 }
 
 .right-section-comment2-cont {
-    width: 350px;
-    height: 300px;
+    max-width: 350px;
+    min-height: 300px;
     background: #FFFFFF;
     border-radius: 15px;
     padding: 40px;
@@ -236,7 +236,7 @@ export default {
 }
 
 .right-section-comment2-par {
-    width: 230px;
+    max-width: 230px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;

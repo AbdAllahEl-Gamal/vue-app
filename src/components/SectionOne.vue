@@ -1,31 +1,36 @@
 <template>
     <div :style="sectionBackgroundImage" class="container-fluid">
         <app-navigation></app-navigation>
-        <div class="row play-for-purpose-col">
-            <div class="col-12 section-one-col">
-                <div class="play-for-purpose-section">
-                    <img src="Play4PURPOSE.png" class="play-for-purpose-image">
-                    <div class="join-now-btn-border-wrap">
-                        <a class="join-now-btn">JOIN NOW <span class="join-now-right-arrows">>></span></a>
-                    </div>
-                    <!-- <div class="test-div">
-                        JOIN NOW <span class="join-now-right-arrows">>></span>
-                    </div> -->
-                    <div class="games-images-section">
-                        <img src="Warzone.png">
-                        <img src="apexWhite.png">
-                        <img src="PUBG.png">
-                    </div>
+        <div class="row play-for-purpose-row">
+            <div class="col-6">
+                <div class="play-for-purpose-section-par-cont">
+                    <p class="play-for-purpose-text">Play<span class="four-number">4</span><br><span class="purpose-word">PURPOSE</span></p>
                 </div>
+                <div class="join-now-btn-border-wrap">
+                    <a class="join-now-btn">JOIN NOW <span class="join-now-right-arrows">>></span></a>
+                </div>
+                <div class="games-images-section">
+                    <img src="Warzone.png">
+                    <img src="apexWhite.png">
+                    <img src="PUBG.png">
+                </div>
+            </div>
+            <div class="col-6 soldier-section-col">
                 <div class="soldier-section">
                     <img src="maskGroup.png">
                 </div>
-            </div>            
+            </div>
         </div>
         <div class="row three-steps-row">
             <div :style="threeStepsBackgroundImage" class="three-steps-col">
                 <p class="three-steps-header">3 Easy-Steps</p>
                 <div class="row three-steps-content">
+                        <!-- <img src="Rectangle6.png">
+                        <img src="Group4.png">
+                        <img src="Polygon1.png">
+                        <img src="Rectangle7.png">
+                        <img src="Vector2.png">
+                        <img src="Vector2.png"> -->
                     <div class="col-4">
                         <p class="three-steps-number">01</p>
                         <p class="three-steps-title">JOIN</p>
@@ -76,22 +81,13 @@ export default {
     position: relative;
 }
 
-.play-for-purpose-section {
-    position: absolute;
-    top: 2px;
-    left: 79px;
-    z-index: 3;
-}
-
-.play-for-purpose-section .play-for-purpose-image {
-    width: 100%;
+.soldier-section-col {
+    position: relative;
 }
 
 .soldier-section {
     position: absolute;
-    top: -20px;
-    left: 600px;
-    z-index: 2;
+    right: 0;
 }
 
 .soldier-section img {
@@ -109,8 +105,8 @@ export default {
     font-weight: 500;
     font-size: 23px;
     letter-spacing: 0.05em;
-    margin-top: 80px;
     clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    margin-left: 5vw;
 }
 
 .join-now-btn {
@@ -132,7 +128,7 @@ export default {
 }
 
 .games-images-section {
-    margin-top: 80px;
+    margin-left: 5vw;
 }
 
 .games-images-section img {
@@ -157,7 +153,7 @@ export default {
     background: white;
 } */
 
-.play-for-purpose-col {
+.play-for-purpose-row {
     height: 100vh;
 }
 
@@ -182,16 +178,12 @@ export default {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
-    margin-bottom: 5%;
+    margin-bottom: 0px;
 }
 
 .three-steps-content {
     position: relative;
-    text-align: center;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    top: 57%;
+    top: 50%;
 }
 
 .three-steps-number {
@@ -217,7 +209,7 @@ export default {
 }
 
 .three-steps-text {
-    width: 230px;
+    max-width: 230px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
@@ -225,10 +217,38 @@ export default {
     text-align: left;
     line-height: 32px;
     color: #FFFFFF;
-    margin-left: 39%;
 }
 
-.number-margin {
-    margin-left: 30px;
+.play-for-purpose-section-par-cont {
+    margin-bottom: 2vw;
+}
+
+.play-for-purpose-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10vw;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    padding-left: 5vw;
+}
+
+.four-number {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 11vw;
+    letter-spacing: 0.01em;
+    color: #9672FF;
+}
+
+.purpose-word {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10vw;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
 }
 </style>
