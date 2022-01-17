@@ -1,7 +1,7 @@
 <template>
     <div :style="sectionBackgroundImage" class="container-fluid">
         <app-navigation></app-navigation>
-        <div class="row">
+        <div class="row play-for-purpose-col">
             <div class="col-12 section-one-col">
                 <div class="play-for-purpose-section">
                     <img src="Play4PURPOSE.png" class="play-for-purpose-image">
@@ -20,6 +20,28 @@
                 <div class="soldier-section">
                     <img src="maskGroup.png">
                 </div>
+            </div>            
+        </div>
+        <div class="row three-steps-row">
+            <div :style="threeStepsBackgroundImage" class="three-steps-col">
+                <p class="three-steps-header">3 Easy-Steps</p>
+                <div class="row three-steps-content">
+                    <div class="col-4">
+                        <p class="three-steps-number number-margin">01</p>
+                        <p class="three-steps-title">JOIN</p>
+                        <p class="three-steps-text">Subscribe to 365games.net and choose your membership (1, 3 or 6-months)</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="three-steps-number number-margin">02</p>
+                        <p class="three-steps-title">PLAY</p>
+                        <p class="three-steps-text">Play your favorite battle royale game (COD Warzone, Apex Legend or Fortnite)</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="three-steps-number number-margin">03</p>
+                        <p class="three-steps-title">EARN</p>
+                        <p class="three-steps-text">Earn up to 1 million dollars by playing tournaments or by lucky draws!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -31,7 +53,8 @@ export default {
     name: 'SectionOne',
     data() {
         return {
-            sectionBackgroundImage: {backgroundImage: "url(headerBg.png)"}
+            sectionBackgroundImage: { backgroundImage: "url(headerBg.png)" },
+            threeStepsBackgroundImage: { backgroundImage: "url(3easystepsbg.png)" }
         };
     },
     components: {
@@ -42,7 +65,7 @@ export default {
 
 <style scoped>
 .container-fluid {
-    height: 1445px;
+    height: 290vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
@@ -133,4 +156,79 @@ export default {
     clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
     background: white;
 } */
+
+.play-for-purpose-col {
+    height: 100vh;
+}
+
+.three-steps-row {
+    height: 100vh;
+}
+
+.three-steps-col {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.three-steps-header {
+    position: relative;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    color: #FFFFFF;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    margin-bottom: 5%;
+}
+
+.three-steps-content {
+    position: relative;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 57%;
+}
+
+.three-steps-number {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 140px;
+    line-height: 110px;
+    background: linear-gradient(180deg, #9471FC 0%, #886FCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 0 black;
+    -webkit-text-stroke: 0.1px #9471FC;
+}
+
+.three-steps-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 47px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.three-steps-text {
+    width: 230px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-left: 39%;
+}
+
+.number-margin {
+    margin-left: 30px;
+}
 </style>

@@ -4,7 +4,6 @@
         <SectionTwo></SectionTwo>
         <SectionThree></SectionThree>
         <SectionFour></SectionFour>
-        <SectionFive></SectionFive>
     </div>
 </template>
 
@@ -13,7 +12,6 @@ import SectionOne from '@/components/SectionOne';
 import SectionTwo from '@/components/SectionTwo';
 import SectionThree from '@/components/SectionThree';
 import SectionFour from '@/components/SectionFour';
-import SectionFive from '@/components/SectionFive';
 
 export default {
     name: 'home',
@@ -21,8 +19,7 @@ export default {
         SectionOne,
         SectionTwo,
         SectionThree,
-        SectionFour,
-        SectionFive
+        SectionFour
     }
 };
 </script>

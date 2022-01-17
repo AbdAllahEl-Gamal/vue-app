@@ -1,29 +1,29 @@
 <template>
-    <div class="container-fluid">
-        <div class="row faq-header-section">
-            <p class="faq-par">Frequently Asked Questions</p>
-        </div>
-        <div class="row faq-body-section">
-            <div class="col-3">
-                <p class="faq-body-left-section-par1">Do you have any question?<br>Please ask here we ready to<br>support</p>
-                <p class="faq-body-left-section-par2">If your question is not list here,<br>please feel free to make a<br>manual support.</p>
-                <button class="faq-body-left-section-btn">Ask your Question</button>
+    <div :style="sectionBackgroundImage" class="container-fluid">
+        <div class="row newspaper-section">
+            <div class="col-4 newspaper-soldier-section">
+                <img src="newspaperSoldier.png">
             </div>
-            <div class="col-8">
-                <ul>
-                    <li v-for="(navItem, i) in menuList" :key="i" class="nav-item">
-                        <a class="nav-link" href="javascript:;" data-toggle="collapse" role="button" :aria-expanded="navItem.expand" @click.prevent="navItemCollapse(i)">
-                            <i class="ni ni-single-copy-04 text-primary"></i>
-                            <span class="nav-link-text">{{ navItem.question }}</span>
-                            <span :class="'arrow '+[navItem.expand ? 'down' : 'right']"></span>
-                        </a>
-                        <div v-if="navItem.answer" class="collapse" :class="{show: navItem.expand}">
-                            <ul class="nav nav-sm flex-column">
-                                <span class="nav-link">{{ navItem.answer }}</span>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+            <div class="col-8 newspaper-soldier-form-section">
+                <img src="Heading.png">
+                <p>Get the latest updates about our new games and prizes</p>
+                <input type="email" class="form-control newspaper-soldier-form-mail-input" id="inputEmail" placeholder="Enter your email">  
+                <button class="subscribe-btn">S</button>    
+            </div>
+        </div>
+        <div class="row footer-section">
+            <div class="col-4">
+                <p class="copyright-par">©2022 <span class="purple-color">365games.</span> All Rights Reserved.</p>
+            </div>
+            <div class="col-4">
+                <a class="footer-links">Advertise</a>
+                <a class="footer-links">Sponsor</a>
+                <a class="footer-links">Careers</a>
+            </div>
+            <div class="col-4">
+                <a class="social-media-icons"><img src="Facebook.png"></a>
+                <a class="social-media-icons"><img src="Twitter.png"></a>
+                <a class="social-media-icons"><img src="Instagram.png"></a>
             </div>
         </div>
     </div>
@@ -31,158 +31,107 @@
 
 <script>
 export default {
-    name: 'SectionFour',
+    name: 'SectionFive',
     data() {
-    return {
-      menuList: [{
-          question: 'How much does it cost to be 365 member?',
-          expand: true,
-          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
-        },
-        {
-          question: 'How can I join as an influencer?',
-          expand: false,
-          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
-        },
-        {
-          question: 'What are the prizes for the daily playing?',
-          expand: false,
-          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
-        },
-        {
-          question: 'Can I make cash payments?',
-          expand: false,
-          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
-        },
-        {
-          question: 'How do I get the payment complete?',
-          expand: false,
-          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
-        }
-      ]
-    }
-  },
-  methods: {
-    navItemCollapse(index) {
-      this.menuList = this.menuList.map((item, i) => {
-        item.expand = !item.expand
-        if (i !== index) {
-          item.expand = false
-        }
-        return item
-      })
-    }
-  }
+        return {
+            sectionBackgroundImage: {backgroundImage: "url(newsletterBg.png)"}
+        };
+    },
 };
 </script>
 
 <style scoped>
 .container-fluid {
-    height: 100vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
 }
 
-.faq-header-section {
-    text-align: center;
+.newspaper-section {
+    padding-bottom: 100px;
 }
 
-.faq-par {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 65px;
-    letter-spacing: -1.5px;
-    color: #FDFDFD;
+.newspaper-soldier-section {
+    margin-top: 20%;
 }
 
-.faq-body-section {
-    text-align: left;
-    margin-top: 100px;
-    margin-left: 80px;
+.newspaper-soldier-section img {
+    width: 100%;
+    margin-left: 17px;
 }
 
-.faq-body-left-section-par1 {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: -1px;
-    color: #FFFFFF;
+.newspaper-soldier-form-section {
+    margin-top: 43%;
 }
 
-.faq-body-left-section-par2 {
+.newspaper-soldier-form-section img {
+    padding-left: 5%;
+}
+
+.newspaper-soldier-form-section p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    color: #CDCADB;
-    margin-top: 30px;
-}
-
-.faq-body-left-section-btn {
-    margin-top: 30px;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-.nav-item {
-    border-bottom: 1px solid #9672FF;
-}
-
-.nav-link-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
     font-size: 17px;
-    line-height: 35px;
-    letter-spacing: -0.2px;
-    color: #FFFFFF;
-    padding-bottom: 10px !important;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+    opacity: 0.6;
 }
 
-.nav-link {
-    font-family: Poppins;
+.newspaper-soldier-form-mail-input {
+    display: inline-block;
+    width: 330.58px !important;
+    height: 65.55px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    color: #ffffff !important;
+}
+
+.newspaper-soldier-form-mail-input::placeholder {
+    color: #ffffff !important;
+}
+
+.newspaper-soldier-form-mail-input:focus {
+    box-shadow: none !important;
+}
+
+.subscribe-btn {
+    
+}
+
+.footer-section {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.copyright-par {
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 30px;
     color: #FFFFFF;
-    opacity: 0.7;
-    text-decoration: none;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 30px;
 }
 
-.nav-link:hover {
-    color: #FFFFFF !important;
-    opacity: 0.7;
+.purple-color {
+    color: #9672FF;
 }
 
-.arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    float: right;
+.footer-links {
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none !important;
+    color: #FFFFFF;
+    margin-right: 30px;
+}
+
+.social-media-icons {
+    cursor: pointer;
+    text-decoration: none !important;
     margin-right: 20px;
-    margin-top: 1%;
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
 </style>

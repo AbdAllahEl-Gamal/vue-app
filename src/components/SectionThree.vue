@@ -1,56 +1,29 @@
 <template>
     <div class="container-fluid">
-        <div class="row section-three-row">
-            <div class="col-6">
-                <div class="left-section">
-                    <div class="symbol-cont">
-                        <img src="symbol.png" class="symbol-image">
-                        <p class="left-section-header">What<br>Players Say</p>
-                    </div>
-                    <div class="left-section-comment-cont">
-                        <div class="left-section-icon-cont">
-                            <img src="Icon1.png" class="left-section-comment-icon">
-                        </div>
-                        <span class="left-section-quote-mark-span">
-                            <img src="quoteMark.png">
-                        </span>
-                        <p class="left-section-comment-par">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                        </p>
-                        <p class="left-section-comment-author">Jesper Wecksell</p>
-                        <p class="left-section-comment-role">Player, Fanatic Team</p>
-                    </div>
-                </div>                
+        <div class="row faq-header-section">
+            <p class="faq-par">Frequently Asked Questions</p>
+        </div>
+        <div class="row faq-body-section">
+            <div class="col-3">
+                <p class="faq-body-left-section-par1">Do you have any question?<br>Please ask here we ready to<br>support</p>
+                <p class="faq-body-left-section-par2">If your question is not list here,<br>please feel free to make a<br>manual support.</p>
+                <button class="faq-body-left-section-btn">Ask your Question</button>
             </div>
-            <div class="col-6">
-                <div class="right-section">
-                    <div class="right-section-comment1-cont">
-                        <div class="right-section-comment1-icon-cont">
-                            <img src="ogLogo.png" class="right-section-comment1-icon">
+            <div class="col-8">
+                <ul>
+                    <li v-for="(navItem, i) in menuList" :key="i" class="nav-item">
+                        <a class="nav-link" href="javascript:;" data-toggle="collapse" role="button" :aria-expanded="navItem.expand" @click.prevent="navItemCollapse(i)">
+                            <i class="ni ni-single-copy-04 text-primary"></i>
+                            <span class="nav-link-text">{{ navItem.question }}</span>
+                            <span :class="'arrow '+[navItem.expand ? 'down' : 'right']"></span>
+                        </a>
+                        <div v-if="navItem.answer" class="collapse" :class="{show: navItem.expand}">
+                            <ul class="nav nav-sm flex-column">
+                                <span class="nav-link">{{ navItem.answer }}</span>
+                            </ul>
                         </div>
-                        <span class="right-section-comment1-quote-mark-span">
-                            <img src="quoteMark.png">
-                        </span>
-                        <p class="right-section-comment1-par">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <p class="right-section-comment1-author">Matthea Wünsch</p>
-                        <p class="right-section-comment1-role">Manager, Team Liquid</p>
-                    </div>
-                    <div class="right-section-comment2-cont">
-                        <div class="right-section-comment2-icon-cont">
-                            <img src="LGD.png" class="right-section-comment2-icon">
-                        </div>
-                        <span class="right-section-comment2-quote-mark-span">
-                            <img src="quoteMark.png">
-                        </span>
-                        <p class="right-section-comment2-par">
-                            365 games gave us a new generation of gaming
-                        </p>
-                        <p class="right-section-comment2-author">Wang Chunyu</p>
-                        <p class="right-section-comment2-role">Leader, LGD Gaming</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -58,215 +31,157 @@
 
 <script>
 export default {
-    name: 'SectionThree'
+    name: 'SectionFour',
+    data() {
+    return {
+      menuList: [{
+          question: 'How much does it cost to be 365 member?',
+          expand: true,
+          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
+        },
+        {
+          question: 'How can I join as an influencer?',
+          expand: false,
+          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
+        },
+        {
+          question: 'What are the prizes for the daily playing?',
+          expand: false,
+          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
+        },
+        {
+          question: 'Can I make cash payments?',
+          expand: false,
+          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
+        },
+        {
+          question: 'How do I get the payment complete?',
+          expand: false,
+          answer: 'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend'
+        }
+      ]
+    }
+  },
+  methods: {
+    navItemCollapse(index) {
+      this.menuList = this.menuList.map((item, i) => {
+        item.expand = !item.expand
+        if (i !== index) {
+          item.expand = false
+        }
+        return item
+      })
+    }
+  }
 };
 </script>
 
 <style scoped>
 .container-fluid {
-    height: 125vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
 }
 
-.left-section {
-    position: relative;
-    float: right;
+.faq-header-section {
+    text-align: center;
 }
 
-.symbol-cont {
-    margin-bottom: 65px;
-}
-
-.symbol-image {
-    position: absolute;
-    left: -145px;
-    top: -85px;
-}
-
-.left-section-header {
-    position: relative;
+.faq-par {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
     font-size: 65px;
-    line-height: 64px;
+    letter-spacing: -1.5px;
+    color: #FDFDFD;
+}
+
+.faq-body-section {
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.faq-body-left-section-par1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -1px;
     color: #FFFFFF;
-    text-align: left;
 }
 
-.left-section-comment-cont {
-    width: 416px;
-    height: 436px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 40px;
-}
-
-.left-section-comment-par {
-    width: 304px;
+.faq-body-left-section-par2 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
-    color: #18191F;
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 5px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #CDCADB;
+    margin-top: 30px;
 }
 
-.left-section-comment-icon {
-    text-align: left;
+.faq-body-left-section-btn {
+    margin-top: 30px;
 }
 
-.left-section-comment-author {
+ul li {
+    list-style-type: none;
+}
+
+.nav-item {
+    border-bottom: 1px solid #9672FF;
+}
+
+.nav-link-text {
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0px !important;
-    padding-left: 20px;
-}
-
-.left-section-comment-role {
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    color: #969BAB;
-    padding-left: 20px;
+    font-size: 17px;
+    line-height: 35px;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    padding-bottom: 10px !important;
 }
 
-.left-section-quote-mark-span {
-    display: inline-block;
-    float: left;
-}
-
-.left-section-icon-cont {
-    margin-bottom: 15px;
-    margin-left: 22px;
-}
-
-.right-section-comment1-cont {
-    width: 509px;
-    height: 360px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 40px;
-    margin-top: 35px;
-}
-
-.right-section-comment1-icon-cont {
-    margin-bottom: 15px;
-    margin-left: 22px;
-}
-
-.right-section-comment1-icon {
-    text-align: left;
-}
-
-.right-section-comment1-quote-mark-span {
-    display: inline-block;
-    float: left;
-}
-
-.right-section-comment1-par {
-    width: 445px;
-    font-family: 'Poppins';
+.nav-link {
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
-    color: #18191F;
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 5px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    text-decoration: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 30px;
 }
 
-.right-section-comment1-author {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0px !important;
-    padding-left: 20px;
+.nav-link:hover {
+    color: #FFFFFF !important;
+    opacity: 0.7;
 }
 
-.right-section-comment1-role {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    color: #969BAB;
-    padding-left: 20px;
-}
-
-.right-section-comment2-cont {
-    width: 350px;
-    height: 300px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 40px;
-    margin-top: 35px;
-}
-
-.right-section-comment2-icon-cont {
-    margin-bottom: 15px;
-    margin-left: 22px;
-}
-
-.right-section-comment2-icon {
-    text-align: left;
-}
-
-.right-section-comment2-quote-mark-span {
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
     display: inline-block;
-    float: left;
+    padding: 3px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 1%;
 }
 
-.right-section-comment2-par {
-    width: 230px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
-    color: #18191F;
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 5px;
-    margin-bottom: 25px;
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
-.right-section-comment2-author {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0px !important;
-    padding-left: 20px;
-}
-
-.right-section-comment2-role {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    color: #969BAB;
-    padding-left: 20px;
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 </style>
