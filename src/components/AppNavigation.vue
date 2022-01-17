@@ -85,6 +85,7 @@ export default {
     position: relative;
     background: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%);
     padding: 1px !important;
+    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
 }
 
 .login-btn {

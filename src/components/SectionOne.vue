@@ -8,6 +8,9 @@
                     <div class="join-now-btn-border-wrap">
                         <a class="join-now-btn">JOIN NOW <span class="join-now-right-arrows">>></span></a>
                     </div>
+                    <!-- <div class="test-div">
+                        JOIN NOW <span class="join-now-right-arrows">>></span>
+                    </div> -->
                     <div class="games-images-section">
                         <img src="Warzone.png">
                         <img src="apexWhite.png">
@@ -84,6 +87,7 @@ export default {
     font-size: 23px;
     letter-spacing: 0.05em;
     margin-top: 80px;
+    clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
 }
 
 .join-now-btn {
@@ -111,4 +115,22 @@ export default {
 .games-images-section img {
     margin-right: 80px;
 }
+
+/* .test-div {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+    clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    background: white;
+} */
 </style>
