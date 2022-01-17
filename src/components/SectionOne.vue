@@ -27,7 +27,7 @@
                 <p class="three-steps-header">3 Easy-Steps</p>
                 <div class="row three-steps-content">
                     <div class="col-4">
-                        <p class="three-steps-number number-margin">01</p>
+                        <p class="three-steps-number">01</p>
                         <p class="three-steps-title">JOIN</p>
                         <p class="three-steps-text">Subscribe to 365games.net and choose your membership (1, 3 or 6-months)</p>
                     </div>
