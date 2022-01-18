@@ -390,4 +390,45 @@ export default {
   from { opacity: 1; }
   to { opacity: 0.3; }
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .play-for-purpose-text {
+    font-size: 25vw;  
+    padding-left: 20px;
+  }
+  .four-number {
+    font-size: 26vw;
+  }
+  .purpose-word {
+    font-size: 25vw;
+  }
+  .join-now-btn {
+    max-width: 180px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .join-now-right-arrows {
+    padding-left: 3%;
+  }
+  .large-spinner {
+    width: 300px;
+    height: 300px;
+  }
+  .small-spinner {
+    width: 250px;
+    height: 250px;
+    left: -8%;
+    top: 9%;
+  }
+  .polygon-image {
+    top: 3%;
+  }
+  .x-image {
+    top: 30%;
+  }
+  .eclipse {
+    bottom: -33%;
+  }
+}
 </style>

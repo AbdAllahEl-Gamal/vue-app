@@ -93,4 +93,23 @@ export default {
 .login-btn:hover {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .nav-section {
+    padding-bottom: 30px;
+  }
+  .navbar-nav {
+    display: contents;
+  }
+  .nav-left-icon {
+    padding-left: 20px;
+  }
+  .navbar-light .navbar-nav .nav-item {
+    padding-right: 20px;
+  }
+  .nav-right {
+    width: auto;
+  }
+}
 </style>
