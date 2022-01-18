@@ -59,7 +59,7 @@ export default {
 }
 
 .nav-left-icon {
-    padding-left: 63px;
+    padding-left: 115px;
 }
 
 .navbar-light .navbar-nav .nav-item a {

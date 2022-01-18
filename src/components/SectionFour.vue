@@ -5,7 +5,7 @@
                 <img src="newspaperSoldier.png" class="newspaper-soldier-image">
                 <img src="Rectangle6.png" class="rectangle-image">
                 <img src="Polygon1.png" class="polygon-image">
-                <img src="Group4.png" class="triangle-image">
+                <img src="Group4.png" class="x-image">
             </div>
             <div class="col-8 newspaper-soldier-form-section">
                 <p class="header">Newsletter</p>
@@ -71,6 +71,7 @@ export default {
 .newspaper-soldier-section .newspaper-soldier-image {
     width: 100%;
     margin-top: 7%;
+    animation: glow 3s infinite alternate;
 }
 
 .newspaper-soldier-section .rectangle-image {
@@ -85,7 +86,7 @@ export default {
     left: 24%;
 }
 
-.newspaper-soldier-section .triangle-image {
+.newspaper-soldier-section .x-image {
     position: absolute;
     top: 25%;
     right: 0;
@@ -200,5 +201,46 @@ export default {
     cursor: pointer;
     text-decoration: none !important;
     margin-right: 20px;
+}
+
+.newspaper-soldier-section .rectangle-image,
+.newspaper-soldier-section .polygon-image,
+.newspaper-soldier-section .x-image {
+    transition-duration: 5;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  from { opacity: 0.9; }
+  to { opacity: 0.3; }
 }
 </style>

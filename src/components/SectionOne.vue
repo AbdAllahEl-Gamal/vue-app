@@ -5,6 +5,7 @@
             <div class="col-6">
                 <div class="play-for-purpose-section-par-cont">
                     <p class="play-for-purpose-text">Play<span class="four-number">4</span><br><span class="purpose-word">PURPOSE</span></p>
+                    <div class="eclipse"></div>
                 </div>
                 <div class="join-now-btn">
                     <a>JOIN NOW <span class="join-now-right-arrows">>></span></a>
@@ -25,6 +26,10 @@
                 <div class="soldier-section">
                     <img src="maskGroup.png">
                 </div>
+                <div class="small-spinner"></div>
+                <div class="large-spinner"></div>
+                <img src="Polygon1.png" class="polygon-image">
+                <img src="Group4.png" class="x-image">
             </div>
         </div>
         <div class="row three-steps-row">
@@ -94,12 +99,15 @@ export default {
 
 .soldier-section {
     position: relative;
+    z-index: 1;
 }
 
 .soldier-section img {
     position: absolute;
     width: 100%;
     right: 22%;
+    top: 30px;
+    animation: glow 3s infinite alternate;
 }
 
 .join-now-btn {
@@ -115,7 +123,7 @@ export default {
     text-align: center;
     letter-spacing: 0.05em;
     clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
-    margin-left: 3.8vw;
+    margin-left: 8vw;
     margin-bottom: 5vw;
     border-style: solid;
     border-width: 4px;
@@ -135,7 +143,7 @@ export default {
 }
 
 .games-images-section {
-    margin-left: 3.8vw;
+    margin-left: 7.3vw;
 }
 
 .games-images-section img {
@@ -211,7 +219,7 @@ export default {
 
 .play-for-purpose-section-par-cont {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: 3vw;
 }
 
@@ -223,7 +231,7 @@ export default {
     line-height: 1.1em;
     letter-spacing: 0.01em;
     color: #FFFFFF;
-    padding-left: 3.8vw;
+    padding-left: 7.3vw;
 }
 
 .four-number {
@@ -242,5 +250,144 @@ export default {
     font-size: 10.5vw;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+}
+
+.small-spinner {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border: 4px solid #9672FF;
+    border-top: 4px solid #6B4FE8;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 7px;
+    top: 13%;
+    left: 3.7%;
+    transition-duration: 5s;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.large-spinner {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 4px solid #9672FF;
+    border-top: 4px solid #6B4FE8;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 7px;
+    right: 25%;
+    top: 5%;
+    transition-duration: 1.2;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.polygon-image {
+    position: absolute;
+    right: 29%;
+    top: 12%;
+}
+
+.x-image {
+    position: absolute;
+    right: 40%;
+    top: 55%;
+}
+
+.polygon-image,
+.x-image {
+    transition-duration: 5;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.eclipse {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid transparent;
+    border-top: 4px solid #6B4FE8;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    bottom: -27%;
+    right: 20%;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 1s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
 }
 </style>
