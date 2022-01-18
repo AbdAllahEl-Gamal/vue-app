@@ -7,7 +7,9 @@
             <div class="col-3">
                 <p class="faq-body-left-section-par1">Do you have any question?<br>Please ask here we ready to<br>support</p>
                 <p class="faq-body-left-section-par2">If your question is not list here,<br>please feel free to make a<br>manual support.</p>
-                <button class="faq-body-left-section-btn">Ask your Question</button>
+                <div class="faq-body-left-section-btn">
+                    <a>Ask your Question</a>
+                </div>
             </div>
             <div class="col-8">
                 <ul>
@@ -111,6 +113,7 @@ export default {
     line-height: 34px;
     letter-spacing: -1px;
     color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 .faq-body-left-section-par2 {
@@ -120,11 +123,32 @@ export default {
     font-size: 16px;
     line-height: 26px;
     color: #CDCADB;
-    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .faq-body-left-section-btn {
-    margin-top: 30px;
+    cursor: pointer;
+    max-width: 194px;
+    color: #ffffff !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    letter-spacing: -0.16px;
+    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%) 1;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none !important;
+}
+
+.faq-body-left-section-btn:hover {
+    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
 }
 
 ul li {
@@ -168,7 +192,6 @@ ul li {
 .arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
-    display: inline-block;
     padding: 3px;
     float: right;
     margin-right: 20px;

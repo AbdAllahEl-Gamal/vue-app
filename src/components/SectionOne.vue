@@ -6,13 +6,19 @@
                 <div class="play-for-purpose-section-par-cont">
                     <p class="play-for-purpose-text">Play<span class="four-number">4</span><br><span class="purpose-word">PURPOSE</span></p>
                 </div>
-                <div class="join-now-btn-border-wrap">
-                    <a class="join-now-btn">JOIN NOW <span class="join-now-right-arrows">>></span></a>
+                <div class="join-now-btn">
+                    <a>JOIN NOW <span class="join-now-right-arrows">>></span></a>
                 </div>
-                <div class="games-images-section">
-                    <img src="Warzone.png">
-                    <img src="apexWhite.png">
-                    <img src="PUBG.png">
+                <div class="row games-images-section">
+                    <div class="col-3">
+                        <img src="Warzone.png">
+                    </div>
+                    <div class="col-3">
+                        <img src="apexWhite.png">
+                    </div>
+                    <div class="col-3">
+                        <img src="PUBG.png">
+                    </div>
                 </div>
             </div>
             <div class="col-6 soldier-section-col">
@@ -77,50 +83,46 @@ export default {
     color: #ffffff;
 }
 
-.section-one-col {
-    position: relative;
-}
-
 .soldier-section-col {
     position: relative;
 }
 
 .soldier-section {
-    position: absolute;
-    right: 0;
+    position: relative;
 }
 
 .soldier-section img {
+    position: absolute;
     width: 100%;
+    right: 22%;
 }
 
-.join-now-btn-border-wrap {
-    max-width: 231px;
-    background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
-    padding: 1px !important;
+.join-now-btn {
+    cursor: pointer;
+    max-width: 325px;
     color: #ffffff !important;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: bold;
     font-weight: 500;
     font-size: 23px;
+    color: white;
+    text-align: center;
     letter-spacing: 0.05em;
     clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
-    margin-left: 5vw;
-}
-
-.join-now-btn {
-    cursor: pointer;
-    background: #000000;
-    color: white;
-    padding-right: 25px !important;
-    padding-left: 25px !important;
+    margin-left: 3.8vw;
+    margin-bottom: 5vw;
+    border-style: solid;
+    border-width: 4px;
+    border-image: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%) 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-decoration: none !important;
 }
 
 .join-now-right-arrows {
-    padding-left: 30px;
     letter-spacing: -4px;
+    padding-left: 20%;
 }
 
 .join-now-btn:hover {
@@ -128,30 +130,12 @@ export default {
 }
 
 .games-images-section {
-    margin-left: 5vw;
+    margin-left: 3.8vw;
 }
 
 .games-images-section img {
-    margin-right: 80px;
+    max-width: 60%;
 }
-
-/* .test-div {
-    position: relative;
-    width: 30%;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 10px;
-    text-align: center;
-    color: #ffffff !important;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-weight: 500;
-    font-size: 23px;
-    letter-spacing: 0.05em;
-    clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
-    background: white;
-} */
 
 .play-for-purpose-row {
     height: 100vh;
@@ -193,6 +177,7 @@ export default {
     font-size: 140px;
     line-height: 110px;
     background: linear-gradient(180deg, #9471FC 0%, #886FCF 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 0 black;
@@ -220,18 +205,20 @@ export default {
 }
 
 .play-for-purpose-section-par-cont {
-    margin-bottom: 2vw;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3vw;
 }
 
 .play-for-purpose-text {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 10vw;
+    font-size: 10.5vw;
     line-height: 1.1em;
     letter-spacing: 0.01em;
     color: #FFFFFF;
-    padding-left: 5vw;
+    padding-left: 3.8vw;
 }
 
 .four-number {
@@ -247,7 +234,7 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 10vw;
+    font-size: 10.5vw;
     letter-spacing: 0.01em;
     color: #FFFFFF;
 }

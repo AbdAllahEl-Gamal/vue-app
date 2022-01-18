@@ -22,8 +22,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
-                        <li class="nav-item login-btn-border-wrap">
-                            <a class="nav-link login-btn" href="#">Login</a>
+                        <li class="nav-item login-btn">
+                            <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
                 </nav>
@@ -80,21 +80,16 @@ export default {
     font-size: 20px;
 }
 
-.login-btn-border-wrap {
-    max-width: 250px;
-    position: relative;
-    background: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%);
-    padding: 1px !important;
-    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
-}
-
 .login-btn {
-    background: #000000;
+    cursor: pointer;
+    max-width: 250px;
     color: white;
-    padding-right: 25px !important;
-    padding-left: 25px !important;
-    padding-top: 5px;
-    padding-bottom: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%) 1;
+    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .login-btn:hover {
