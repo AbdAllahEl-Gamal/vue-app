@@ -14,11 +14,9 @@
                         <span class="left-section-quote-mark-span">
                             <img src="quoteMark.png">
                         </span>
-                        <p class="left-section-comment-par">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                        </p>
-                        <p class="left-section-comment-author">Jesper Wecksell</p>
-                        <p class="left-section-comment-role">Player, Fanatic Team</p>
+                        <p class="left-section-comment-par">{{ leftComment }}</p>
+                        <p class="left-section-comment-author">{{ leftCommentAuthor }}</p>
+                        <p class="left-section-comment-role">{{ leftCommentRole }}</p>
                     </div>
                 </div>                
             </div>
@@ -31,11 +29,9 @@
                         <span class="right-section-comment1-quote-mark-span">
                             <img src="quoteMark.png">
                         </span>
-                        <p class="right-section-comment1-par">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <p class="right-section-comment1-author">Matthea Wünsch</p>
-                        <p class="right-section-comment1-role">Manager, Team Liquid</p>
+                        <p class="right-section-comment1-par">{{ rightComment1 }}</p>
+                        <p class="right-section-comment1-author">{{ rightComment1Author }}</p>
+                        <p class="right-section-comment1-role">{{ rightComment1Role }}</p>
                     </div>
                     <div class="right-section-comment2-cont">
                         <div class="right-section-comment2-icon-cont">
@@ -44,11 +40,9 @@
                         <span class="right-section-comment2-quote-mark-span">
                             <img src="quoteMark.png">
                         </span>
-                        <p class="right-section-comment2-par">
-                            365 games gave us a new generation of gaming
-                        </p>
-                        <p class="right-section-comment2-author">Wang Chunyu</p>
-                        <p class="right-section-comment2-role">Leader, LGD Gaming</p>
+                        <p class="right-section-comment2-par">{{ rightComment2 }}</p>
+                        <p class="right-section-comment2-author">{{ rightComment2Author }}</p>
+                        <p class="right-section-comment2-role">{{ rightComment2Role }}</p>
                     </div>
                 </div>
             </div>
@@ -58,7 +52,22 @@
 
 <script>
 export default {
-    name: 'SectionThree'
+    name: 'SectionThree',
+    data() {
+        return {
+            leftComment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+            leftCommentAuthor: 'Jesper Wecksell',
+            leftCommentRole: 'Player, Fanatic Team',
+            rightComment1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            rightComment1Author: 'Matthea Wünsch',
+            rightComment1Role: 'Manager, Team Liquid',
+            rightComment2: '365 games gave us a new generation of gaming',
+            rightComment2Author: 'Wang Chunyu',
+            rightComment2Role: 'Leader, LGD Gaming'
+        };
+    },
+    methods: {
+    }
 };
 </script>
 
@@ -129,6 +138,7 @@ export default {
     font-weight: bold;
     font-size: 18px;
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0px !important;
@@ -145,7 +155,6 @@ export default {
 }
 
 .left-section-quote-mark-span {
-    display: inline-block;
     float: left;
 }
 
@@ -173,7 +182,6 @@ export default {
 }
 
 .right-section-comment1-quote-mark-span {
-    display: inline-block;
     float: left;
 }
 
@@ -197,6 +205,7 @@ export default {
     font-weight: bold;
     font-size: 18px;
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0px !important;
@@ -231,7 +240,6 @@ export default {
 }
 
 .right-section-comment2-quote-mark-span {
-    display: inline-block;
     float: left;
 }
 
@@ -255,6 +263,7 @@ export default {
     font-weight: bold;
     font-size: 18px;
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0px !important;

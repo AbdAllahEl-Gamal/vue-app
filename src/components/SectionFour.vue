@@ -5,12 +5,14 @@
                 <img src="newspaperSoldier.png">
             </div>
             <div class="col-8 newspaper-soldier-form-section">
-                <img src="Heading.png">
-                <p>Get the latest updates about our new games and prizes</p>
-                <input type="email" class="form-control newspaper-soldier-form-mail-input" id="inputEmail" placeholder="Enter your email">      
-                <div class="subscribe-btn">
-                    <a>Subscribe</a>
-                </div>
+                <p class="header">Newsletter</p>
+                <p class="header-text">{{ headerText }}</p>
+                <div class="row email-input-btn-cont">
+                    <input type="email" class="form-control newspaper-soldier-form-mail-input" id="inputEmail" placeholder="Enter your email">
+                    <div class="subscribe-btn">
+                        <a>Subscribe</a>
+                    </div>
+                </div>   
             </div>
         </div>
         <div class="row footer-section">
@@ -36,9 +38,12 @@ export default {
     name: 'SectionFive',
     data() {
         return {
-            sectionBackgroundImage: {backgroundImage: "url(newsletterBg.png)"}
+            sectionBackgroundImage: {backgroundImage: "url(newsletterBg.png)"},
+            headerText: 'Get the latest updates about our new games and prizes'
         };
     },
+    methods: {
+    }
 };
 </script>
 
@@ -47,6 +52,7 @@ export default {
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: #ffffff;
 }
 
@@ -67,11 +73,18 @@ export default {
     margin-top: 43%;
 }
 
-.newspaper-soldier-form-section img {
-    padding-left: 5%;
+.newspaper-soldier-form-section .header {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 63px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    margin-left: 4%;
 }
 
-.newspaper-soldier-form-section p {
+.newspaper-soldier-form-section .header-text {
     max-width: 100%;
     font-family: 'Poppins';
     font-style: normal;
@@ -82,14 +95,19 @@ export default {
     opacity: 0.6;
 }
 
+.email-input-btn-cont {
+    margin-left: 0px;
+}
+
 .newspaper-soldier-form-mail-input {
     display: inline-block;
-    width: 330.58px !important;
-    height: 65.55px !important;
+    width: 280px !important;
+    height: 55px !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
     border: none !important;
     border-radius: 5px !important;
     color: #ffffff !important;
+    margin-right: 20px;
 }
 
 .newspaper-soldier-form-mail-input::placeholder {
@@ -116,8 +134,8 @@ export default {
     border-width: 2px;
     border-image: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%) 1;
     border-radius: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     text-decoration: none !important;
     opacity: 0.8;
 }

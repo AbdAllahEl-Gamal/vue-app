@@ -40,17 +40,17 @@
                     <div class="col-4">
                         <p class="three-steps-number">01</p>
                         <p class="three-steps-title">JOIN</p>
-                        <p class="three-steps-text">Subscribe to 365games.net and choose your membership (1, 3 or 6-months)</p>
+                        <p class="three-steps-text">{{ joinText }}</p>
                     </div>
                     <div class="col-4">
                         <p class="three-steps-number number-margin">02</p>
                         <p class="three-steps-title">PLAY</p>
-                        <p class="three-steps-text">Play your favorite battle royale game (COD Warzone, Apex Legend or Fortnite)</p>
+                        <p class="three-steps-text">{{ playText }}</p>
                     </div>
                     <div class="col-4">
                         <p class="three-steps-number number-margin">03</p>
                         <p class="three-steps-title">EARN</p>
-                        <p class="three-steps-text">Earn up to 1 million dollars by playing tournaments or by lucky draws!</p>
+                        <p class="three-steps-text">{{ earnText }}</p>
                     </div>
                 </div>
             </div>
@@ -65,11 +65,16 @@ export default {
     data() {
         return {
             sectionBackgroundImage: { backgroundImage: "url(headerBg.png)" },
-            threeStepsBackgroundImage: { backgroundImage: "url(3easystepsbg.png)" }
+            threeStepsBackgroundImage: { backgroundImage: "url(3easystepsbg.png)" },
+            joinText: 'Subscribe to 365games.net and choose your membership (1, 3 or 6-months)',
+            playText: 'Play your favorite battle royale game (COD Warzone, Apex Legend or Fortnite)',
+            earnText: 'Earn up to 1 million dollars by playing tournaments or by lucky draws!'
         };
     },
     components: {
         AppNavigation
+    },
+    methods: {
     }
 };
 </script>
