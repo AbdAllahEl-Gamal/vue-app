@@ -2,7 +2,10 @@
     <div :style="sectionBackgroundImage" class="container-fluid">
         <div class="row newspaper-section">
             <div class="col-4 newspaper-soldier-section">
-                <img src="newspaperSoldier.png">
+                <img src="newspaperSoldier.png" class="newspaper-soldier-image">
+                <img src="Rectangle6.png" class="rectangle-image">
+                <img src="Polygon1.png" class="polygon-image">
+                <img src="Group4.png" class="triangle-image">
             </div>
             <div class="col-8 newspaper-soldier-form-section">
                 <p class="header">Newsletter</p>
@@ -61,12 +64,31 @@ export default {
 }
 
 .newspaper-soldier-section {
+    position: relative;
     margin-top: 20%;
 }
 
-.newspaper-soldier-section img {
+.newspaper-soldier-section .newspaper-soldier-image {
     width: 100%;
     margin-top: 7%;
+}
+
+.newspaper-soldier-section .rectangle-image {
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+}
+
+.newspaper-soldier-section .polygon-image {
+    position: absolute;
+    top: 10%;
+    left: 24%;
+}
+
+.newspaper-soldier-section .triangle-image {
+    position: absolute;
+    top: 25%;
+    right: 0;
 }
 
 .newspaper-soldier-form-section {
