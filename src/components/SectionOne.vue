@@ -36,23 +36,23 @@
             <div :style="threeStepsBackgroundImage" class="three-steps-col">
                 <p class="three-steps-header">3 Easy-Steps</p>
                 <div class="row h-100 justify-content-center align-items-center three-steps-content">
-                    <!-- <div class="three-steps-shapes-cont">
+                    <div class="three-steps-shapes-cont">
                         <img src="Rectangle6.png" class="three-steps-shapes three-steps-rectangle1">
-                        <img src="Group4.png" class="three-steps-shapes three-steps-x-image">
-                        <img src="Polygon1.png" class="three-steps-shapes three-steps-polygon">
-                        <img src="Rectangle7.png" class="three-steps-shapes three-steps-rectangle2">
-                    </div> -->
+                    </div>
                     <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number">01</p>
                         <p class="three-steps-title">JOIN</p>
                         <p class="three-steps-text">{{ joinText }}</p>
                         <img src="Vector2.png" class="three-steps-shapes three-steps-vector1">
+                        <img src="Group4.png" class="three-steps-shapes three-steps-x-image">
                     </div>
                     <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number number-margin">02</p>
                         <p class="three-steps-title">PLAY</p>
                         <p class="three-steps-text">{{ playText }}</p>
                         <img src="Vector2.png" class="three-steps-shapes three-steps-vector2">
+                        <img src="Rectangle7.png" class="three-steps-shapes three-steps-rectangle2">
+                        <img src="Polygon1.png" class="three-steps-shapes three-steps-polygon">
                     </div>
                     <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number number-margin">03</p>
@@ -187,6 +187,11 @@ export default {
 
 .three-steps-content .three-steps-content-col {
     position: relative;
+    text-align: center;
+}
+
+.three-steps-shapes-cont {
+    position: absolute;
 }
 
 .three-steps-number {
@@ -221,6 +226,7 @@ export default {
     text-align: left;
     line-height: 32px;
     color: #FFFFFF;
+    margin: 0 auto;
     opacity: 0.7;
 }
 
@@ -385,29 +391,59 @@ export default {
 .three-steps-vector1 {
     position: absolute;
     top: -45px;
-    right: 0;
+    left: 64%;
 }
 
 .three-steps-vector2 {
     position: absolute;
     top: -45px;
-    right: 0;
+    left: 64%;
 }
 
 .three-steps-rectangle1 {
-
+    position: absolute;
+    left: 6%;
+    top: 15px;
 }
 
 .three-steps-rectangle2 {
-
+    position: absolute;
+    top: 40%;
+    right: 75px;
 }
 
 .three-steps-polygon {
-
+    position: absolute;
+    top: -50px;
+    right: -140px;
 }
 
 .three-steps-x-image {
-    
+    position: absolute;
+    top: 30%;
+    right: 40px;
+}
+
+.three-steps-shapes.three-steps-rectangle1,
+.three-steps-shapes.three-steps-rectangle2,
+.three-steps-shapes.three-steps-polygon,
+.three-steps-shapes.three-steps-x-image {
+    transition-duration: 5;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    transition-property: transform;
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @-webkit-keyframes rotate {
@@ -468,6 +504,36 @@ export default {
   }
   .eclipse {
     bottom: -33%;
+  }
+  .three-steps-text {
+    max-width: 100px;
+    font-size: 0.4em;
+    line-height: 15px;
+  }
+  .three-steps-vector1, .three-steps-vector2 {
+    width: 50%;
+    top: 90px;
+    left: 73%;
+  }
+  .three-steps-x-image {
+    width: 7%; 
+    top: 45%;
+    right: 20px;
+  }
+  .three-steps-rectangle1 {
+    width: 5%;
+    top: 45px;
+    left: 15px;
+  }
+  .three-steps-rectangle2 {
+    width: 7%;
+    top: 44%;
+    right: 20px;
+  }
+  .three-steps-polygon {
+    width: 7%;
+    top: 85px;
+    right: -45px;
   }
 }
 </style>
