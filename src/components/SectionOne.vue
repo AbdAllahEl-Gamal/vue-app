@@ -35,24 +35,26 @@
         <div class="row three-steps-row">
             <div :style="threeStepsBackgroundImage" class="three-steps-col">
                 <p class="three-steps-header">3 Easy-Steps</p>
-                <div class="row three-steps-content">
-                        <!-- <img src="Rectangle6.png">
-                        <img src="Group4.png">
-                        <img src="Polygon1.png">
-                        <img src="Rectangle7.png">
-                        <img src="Vector2.png">
-                        <img src="Vector2.png"> -->
-                    <div class="col-4">
+                <div class="row h-100 justify-content-center align-items-center three-steps-content">
+                    <!-- <div class="three-steps-shapes-cont">
+                        <img src="Rectangle6.png" class="three-steps-shapes three-steps-rectangle1">
+                        <img src="Group4.png" class="three-steps-shapes three-steps-x-image">
+                        <img src="Polygon1.png" class="three-steps-shapes three-steps-polygon">
+                        <img src="Rectangle7.png" class="three-steps-shapes three-steps-rectangle2">
+                    </div> -->
+                    <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number">01</p>
                         <p class="three-steps-title">JOIN</p>
                         <p class="three-steps-text">{{ joinText }}</p>
+                        <img src="Vector2.png" class="three-steps-shapes three-steps-vector1">
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number number-margin">02</p>
                         <p class="three-steps-title">PLAY</p>
                         <p class="three-steps-text">{{ playText }}</p>
+                        <img src="Vector2.png" class="three-steps-shapes three-steps-vector2">
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 three-steps-content-col">
                         <p class="three-steps-number number-margin">03</p>
                         <p class="three-steps-title">EARN</p>
                         <p class="three-steps-text">{{ earnText }}</p>
@@ -175,19 +177,23 @@ export default {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
-    margin-bottom: 0px;
+    margin-bottom: 5%;
 }
 
 .three-steps-content {
     position: relative;
-    top: 50%;
+    top: 20%;
+}
+
+.three-steps-content .three-steps-content-col {
+    position: relative;
 }
 
 .three-steps-number {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 140px;
+    font-size: 6em;
     line-height: 110px;
     background: linear-gradient(180deg, #9471FC 0%, #886FCF 100%);
     background-clip: text;
@@ -201,20 +207,21 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
-    font-size: 47px;
+    font-size: 3em;
     line-height: 32px;
     color: #FFFFFF;
 }
 
 .three-steps-text {
-    max-width: 230px;
+    max-width: 170px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 0.7em;
     text-align: left;
     line-height: 32px;
     color: #FFFFFF;
+    opacity: 0.7;
 }
 
 .play-for-purpose-section-par-cont {
@@ -369,6 +376,38 @@ export default {
     animation-duration: 1s; 
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.three-steps-shapes {
+    position: absolute;
+}
+
+.three-steps-vector1 {
+    position: absolute;
+    top: -45px;
+    right: 0;
+}
+
+.three-steps-vector2 {
+    position: absolute;
+    top: -45px;
+    right: 0;
+}
+
+.three-steps-rectangle1 {
+
+}
+
+.three-steps-rectangle2 {
+
+}
+
+.three-steps-polygon {
+
+}
+
+.three-steps-x-image {
+    
 }
 
 @-webkit-keyframes rotate {
