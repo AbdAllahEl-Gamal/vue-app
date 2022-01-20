@@ -28,9 +28,9 @@
                 <a class="footer-links">Careers</a>
             </div>
             <div class="col-4">
-                <a class="social-media-icons"><img src="Facebook.png"></a>
-                <a class="social-media-icons"><img src="Twitter.png"></a>
-                <a class="social-media-icons"><img src="Instagram.png"></a>
+                <a class="social-media-icons"><i class="fab fa-2x fa-facebook"></i></a>
+                <a class="social-media-icons"><i class="fab fa-2x fa-twitter"></i></a>
+                <a class="social-media-icons"><i class="fab fa-2x fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -57,6 +57,7 @@ export default {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
+    margin-bottom: -5px;
 }
 
 .newspaper-section {
@@ -168,8 +169,10 @@ export default {
 }
 
 .footer-section {
+    border-top: 1px solid #8080806b;
     text-align: center;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
 
 .copyright-par {
@@ -199,8 +202,25 @@ export default {
 
 .social-media-icons {
     cursor: pointer;
-    text-decoration: none !important;
     margin-right: 20px;
+    text-decoration: none;
+}
+
+.social-media-icons i {
+    color: white;
+    font-size: 16px;
+}
+
+.social-media-icons .fa-facebook:hover {
+    color: #4267B2;
+}
+
+.social-media-icons .fa-twitter:hover {
+    color: #00adb5;
+}
+
+.social-media-icons .fa-instagram:hover {
+    color: #e11d74;
 }
 
 .newspaper-soldier-section .rectangle-image,

@@ -89,11 +89,12 @@ export default {
 
 <style scoped>
 .container-fluid {
-    height: 290vh;
+    height: 300vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
+    margin-bottom: -5px;
 }
 
 .soldier-section-col {
@@ -178,7 +179,6 @@ export default {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
-    margin-bottom: 5%;
 }
 
 .three-steps-content {

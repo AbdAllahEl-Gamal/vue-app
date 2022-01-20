@@ -73,11 +73,12 @@ export default {
 
 <style scoped>
 .container-fluid {
-    height: 180vh;
+    height: 160vh;
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
+    margin-bottom: -5px;
 }
 
 .left-section {

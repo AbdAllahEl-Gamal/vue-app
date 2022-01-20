@@ -83,6 +83,7 @@ export default {
     background-color: black;
     background-repeat: no-repeat;
     color: #ffffff;
+    margin-bottom: -5px;
 }
 
 .faq-header-section {
