@@ -18,6 +18,7 @@
                 </div>   
             </div>
         </div>
+        <hr>
         <div class="row footer-section">
             <div class="col-4">
                 <p class="copyright-par">©2022 <span class="purple-color">365games.</span> All Rights Reserved.</p>
@@ -168,8 +169,15 @@ export default {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
 }
 
+hr {
+    width: 76%;
+    border: 0.5px solid #8080806b;
+    margin: 0 auto;
+    opacity: 0.1;
+    margin-left: 10%;
+}
+
 .footer-section {
-    border-top: 1px solid #8080806b;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 80px;

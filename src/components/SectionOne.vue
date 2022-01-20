@@ -93,6 +93,7 @@ export default {
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
+    background-size: auto auto;
     color: #ffffff;
     margin-bottom: -5px;
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div :style="sectionBackgroundImage" class="container-fluid">
         <div class="row section-three-row">
             <div class="col-6">
                 <div class="left-section">
@@ -55,6 +55,7 @@ export default {
     name: 'SectionThree',
     data() {
         return {
+            sectionBackgroundImage: { backgroundImage: "url(testimonials.png)" },
             leftComment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
             leftCommentAuthor: 'Jesper Wecksell',
             leftCommentRole: 'Player, Fanatic Team',
@@ -77,6 +78,7 @@ export default {
     min-width: 100vh;
     background-color: black;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: #ffffff;
     margin-bottom: -5px;
 }
