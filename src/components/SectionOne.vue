@@ -26,8 +26,9 @@
                 <div class="soldier-section">
                     <img src="maskGroup.png">
                 </div>
-                <div class="small-spinner"></div>
-                <div class="large-spinner"></div>
+                <div class="large-spinner">
+                    <div class="small-spinner"></div>
+                </div>
                 <img src="Polygon1.png" class="polygon-image">
                 <img src="Group4.png" class="x-image">
             </div>
@@ -267,15 +268,16 @@ export default {
 
 .small-spinner {
     position: absolute;
-    width: 480px;
-    height: 480px;
+    width: 30vw;
+    height: 30vw;
     border: 4px solid #9672FF;
     border-top: 4px solid #6B4FE8;
     border-radius: 50%;
     border-style: solid;
     border-width: 7px;
-    top: 13%;
-    left: 3.7%;
+    top: 50%;
+    left: 50%;
+    margin: -15vw 0px 0px -15vw;
     transition-duration: 5s;
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 5s;
@@ -296,8 +298,8 @@ export default {
 
 .large-spinner {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 40vw;
+    height: 40vw;
     border: 4px solid #9672FF;
     border-top: 4px solid #6B4FE8;
     border-radius: 50%;
@@ -469,14 +471,14 @@ export default {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .play-for-purpose-text {
-    font-size: 25vw;  
+    font-size: 7em;  
     padding-left: 20px;
   }
   .four-number {
-    font-size: 26vw;
+    font-size: 1em;
   }
   .purpose-word {
-    font-size: 25vw;
+    font-size: 0.7em;
   }
   .join-now-btn {
     max-width: 180px;
@@ -493,8 +495,7 @@ export default {
   .small-spinner {
     width: 250px;
     height: 250px;
-    left: -8%;
-    top: 9%;
+    margin: -125px 0px 0px -125px;
   }
   .polygon-image {
     top: 3%;
