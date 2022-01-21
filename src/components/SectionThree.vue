@@ -80,7 +80,7 @@ export default {
 <style scoped>
 .container-fluid {
     min-width: 100vh;
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     color: #ffffff;
     margin-bottom: -5px;
@@ -112,7 +112,7 @@ export default {
     font-size: 24px;
     line-height: 34px;
     letter-spacing: -1px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
@@ -127,17 +127,19 @@ export default {
 }
 
 .faq-body-left-section-btn {
+    position: relative;
     cursor: pointer;
+    min-width: 185px;
     max-width: 194px;
     color: #ffffff !important;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
-    color: white;
+    color: #ffffff;
     text-align: center;
     letter-spacing: -0.16px;
-    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    clip-path: polygon(0 0, 92% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
     border-style: solid;
     border-width: 2px;
     border-image: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%) 1;
@@ -149,6 +151,21 @@ export default {
 
 .faq-body-left-section-btn:hover {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+}
+
+.faq-body-left-section-btn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: -1px;
+    right: -14px;
+    bottom: 0;
+    -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-right: 3px solid #9672FF;
+    transform: skew(+45deg);
 }
 
 ul li {
@@ -166,7 +183,7 @@ ul li {
     font-size: 0.8em;
     line-height: 35px;
     letter-spacing: -0.2px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding-bottom: 10px !important;
 }
 
@@ -176,7 +193,7 @@ ul li {
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
     padding-left: 0px;
     padding-right: 0px;
@@ -188,7 +205,7 @@ ul li {
 }
 
 .nav-link.answer:hover {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     opacity: 0.7;
 }
 

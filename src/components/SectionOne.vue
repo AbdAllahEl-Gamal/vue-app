@@ -91,7 +91,7 @@ export default {
 .container-fluid {
     height: 300vh;
     min-width: 100vh;
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: auto auto;
     color: #ffffff;
@@ -116,15 +116,15 @@ export default {
 }
 
 .join-now-btn {
+    position: relative;
     cursor: pointer;
     max-width: 325px;
-    color: #ffffff !important;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: bold;
     font-weight: 500;
     font-size: 23px;
-    color: white;
+    color: #ffffff;
     text-align: center;
     letter-spacing: 0.05em;
     clip-path: polygon(6% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
@@ -145,6 +145,21 @@ export default {
 
 .join-now-btn:hover {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+}
+
+.join-now-btn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: -1px;
+    left: -23px;
+    bottom: 0;
+    -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-right: 8px solid #9672FF;
+    transform: skew(-45deg);
 }
 
 .games-images-section {
@@ -175,7 +190,7 @@ export default {
     font-weight: 800;
     font-size: 80px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -206,7 +221,7 @@ export default {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 0 black;
+    text-shadow: 0 0 0 #000000;
     -webkit-text-stroke: 0.1px #9471FC;
 }
 
@@ -216,7 +231,7 @@ export default {
     font-weight: 900;
     font-size: 3em;
     line-height: 32px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .three-steps-text {
@@ -227,7 +242,7 @@ export default {
     font-size: 0.7em;
     text-align: left;
     line-height: 32px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 auto;
     opacity: 0.7;
 }
@@ -245,7 +260,7 @@ export default {
     font-size: 10.5vw;
     line-height: 1.1em;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
+    color: #ffffff;
     padding-left: 7.3vw;
 }
 
@@ -264,7 +279,7 @@ export default {
     font-weight: 800;
     font-size: 10.5vw;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .small-spinner {

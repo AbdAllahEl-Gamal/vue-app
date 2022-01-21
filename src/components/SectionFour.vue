@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .container-fluid {
     min-width: 100vh;
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
@@ -105,7 +105,7 @@ export default {
     font-size: 65px;
     line-height: 63px;
     letter-spacing: -0.5px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-left: 4%;
 }
 
@@ -126,7 +126,7 @@ export default {
 
 .newspaper-soldier-form-mail-input {
     display: inline-block;
-    width: 280px !important;
+    max-width: 280px !important;
     height: 55px !important;
     background-color: rgba(255, 255, 255, 0.08) !important;
     border: none !important;
@@ -144,17 +144,18 @@ export default {
 }
 
 .subscribe-btn {
+    position: relative;
     cursor: pointer;
-    max-width: 131px;
+    max-width: 120px;
     color: #ffffff !important;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
     text-align: center;
     letter-spacing: -0.5px;
-    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    clip-path: polygon(0 0, 84% 0, 100% 35%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
     border-style: solid;
     border-width: 2px;
     border-image: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%) 1;
@@ -167,6 +168,21 @@ export default {
 
 .subscribe-btn:hover {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+}
+
+.subscribe-btn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: -1px;
+    right: 7px;
+    bottom: 34px;
+    -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-right: 3px solid #9672FF;
+    transform: skew(+45deg);
 }
 
 hr {
@@ -188,7 +204,7 @@ hr {
     font-style: normal;
     font-weight: normal;
     font-size: 0.6em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 0px;
     margin-top: 0.8em;
 }
@@ -204,7 +220,7 @@ hr {
     font-weight: normal;
     font-size: 0.6em;
     text-decoration: none !important;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-right: 30px;
 }
 
@@ -215,7 +231,7 @@ hr {
 }
 
 .social-media-icons i {
-    color: white;
+    color: #ffffff;
     font-size: 16px;
 }
 

@@ -76,7 +76,7 @@ export default {
 .container-fluid {
     height: 160vh;
     min-width: 100vh;
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
@@ -105,14 +105,14 @@ export default {
     font-weight: 800;
     font-size: 65px;
     line-height: 64px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: left;
 }
 
 .left-section-comment-cont {
     max-width: 416px;
     min-height: 436px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 15px;
     padding: 40px;
 }
@@ -169,7 +169,7 @@ export default {
 .right-section-comment1-cont {
     max-width: 509px;
     min-height: 360px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 15px;
     padding: 40px;
     margin-top: 35px;
@@ -227,7 +227,7 @@ export default {
 .right-section-comment2-cont {
     max-width: 350px;
     min-height: 300px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 15px;
     padding: 40px;
     margin-top: 35px;

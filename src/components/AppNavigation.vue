@@ -79,19 +79,35 @@ export default {
 }
 
 .login-btn {
+    position: relative;
     cursor: pointer;
     max-width: 250px;
-    color: white;
+    color: #ffffff;
     border-style: solid;
     border-width: 2px;
     border-image: linear-gradient(220deg, #9672FF 27.76%, rgba(107, 79, 232, 0) 94.18%) 1;
-    clip-path: polygon(0 0, 91% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
+    clip-path: polygon(0 0, 90% 0, 100% 26%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 24%);
     padding-right: 25px;
     padding-left: 25px;
 }
 
 .login-btn:hover {
     background: linear-gradient(180deg, #9672FF 0%, #6B4FE8 100%);
+}
+
+.login-btn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: -1px;
+    right: -15px;
+    bottom: 0;
+    -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-right: 3px solid #9672FF;
+    transform: skew(+45deg);
 }
 
 @media only screen and (max-width: 768px) {
