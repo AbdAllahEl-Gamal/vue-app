@@ -204,7 +204,6 @@ export default {
 
 .three-steps-content .three-steps-content-col {
     position: relative;
-    text-align: center;
 }
 
 .three-steps-shapes-cont {
@@ -212,6 +211,7 @@ export default {
 }
 
 .three-steps-number {
+    max-width: 170px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
@@ -223,15 +223,19 @@ export default {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 0 #000000;
     -webkit-text-stroke: 0.1px #9471FC;
+    margin: 0 auto;
 }
 
 .three-steps-title {
+    max-width: 170px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
     font-size: 3em;
     line-height: 32px;
     color: #ffffff;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .three-steps-text {
@@ -241,7 +245,7 @@ export default {
     font-weight: 300;
     font-size: 0.7em;
     text-align: left;
-    line-height: 32px;
+    line-height: 25px;
     color: #ffffff;
     margin: 0 auto;
     opacity: 0.7;
@@ -408,14 +412,14 @@ export default {
 
 .three-steps-vector1 {
     position: absolute;
-    top: -45px;
-    left: 64%;
+    top: -70px;
+    left: 58%;
 }
 
 .three-steps-vector2 {
     position: absolute;
-    top: -45px;
-    left: 64%;
+    top: -70px;
+    left: 58%;
 }
 
 .three-steps-rectangle1 {
@@ -427,19 +431,19 @@ export default {
 .three-steps-rectangle2 {
     position: absolute;
     top: 40%;
-    right: 75px;
+    right: 125px;
 }
 
 .three-steps-polygon {
     position: absolute;
-    top: -50px;
-    right: -140px;
+    top: -70px;
+    right: -100px;
 }
 
 .three-steps-x-image {
     position: absolute;
-    top: 30%;
-    right: 40px;
+    top: 20%;
+    right: 80px;
 }
 
 .three-steps-shapes.three-steps-rectangle1,
@@ -522,6 +526,16 @@ export default {
   .eclipse {
     bottom: -33%;
   }
+  .three-steps-number {
+    max-width: 100px;
+    font-size: 3em;
+    line-height: 1;
+  }
+  .three-steps-title {
+    max-width: 100px;
+    font-size: 1em;
+    padding-bottom: 0px;  
+  }
   .three-steps-text {
     max-width: 100px;
     font-size: 0.4em;
@@ -529,28 +543,28 @@ export default {
   }
   .three-steps-vector1, .three-steps-vector2 {
     width: 50%;
-    top: 90px;
-    left: 73%;
+    top: 0;
+    left: 65%;
   }
   .three-steps-x-image {
     width: 7%; 
-    top: 45%;
-    right: 20px;
+    top: 25%;
+    right: 40px;
   }
   .three-steps-rectangle1 {
     width: 5%;
-    top: 45px;
+    top: 0;
     left: 15px;
   }
   .three-steps-rectangle2 {
     width: 7%;
-    top: 44%;
-    right: 20px;
+    top: 35%;
+    right: 40px;
   }
   .three-steps-polygon {
     width: 7%;
-    top: 85px;
-    right: -45px;
+    top: 0px;
+    right: -30px;
   }
 }
 </style>
